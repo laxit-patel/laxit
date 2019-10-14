@@ -33,11 +33,41 @@
     <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
 </head>
 
-
+<style type="text/css">
+.wrapper
+{
+	height: 100%;
+	width: 100%;
+	margin: 0% 0%;
+}
+    #warning-message { display: none; }
+    @media only screen and (orientation:portrait){
+        .wrapper { display:none; }
+        #warning-message { 
+			display:block;
+			 }
+    }
+    @media only screen and (orientation:landscape){
+        #warning-message { display:none; }
+    }
+</style>
 <body>
 
 <!-- Navbar will come here -->
+<div id="warning-message">
+		<div class="alert alert-info">
+	            <div class="container">
+					<div class="alert-icon">
+						<i class="material-icons">screen_rotation</i>
+					</div>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true"><i class="material-icons">close</i></span>
+					</button>
 
+	            	<b> Please Rotate Your Phone,</b> <br>This Site Operates in landscape mode only
+	            </div>
+	        </div>
+	</div>
 <!-- end navbar -->
 
 <div class="wrapper">
@@ -220,16 +250,10 @@
 
                 </div>
             </div>
-        </div>
-	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
-	<div class="main">
-		<div class="container">
-
-			<!-- here you can add your content -->
-
 		</div>
-	</div>
 </div>
+
+
 
 <!-- Classic Modal -->
 <div class="modal fade bd-example-modal-lg fludient	" tabindex="-1" role="dialog" id="resumeModal" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -305,6 +329,7 @@
 
 <!--  End Modal -->
 </body>
+
 	<!--   Core JS Files   -->
 	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
